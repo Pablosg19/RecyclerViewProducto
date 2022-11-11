@@ -1,8 +1,9 @@
 package com.example.recyclerviewproducto.clases;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Producto {
+public class Producto implements Serializable {
     // Atributos
     private String nombre;
     private double precio;

@@ -38,12 +38,29 @@ public class ListaProductosAdapter extends RecyclerView.Adapter<ProductoViewHold
         holder.getTxtNombre().setText("Nombre: " + productoSeleccionado.getNombre());
         holder.getTxtCantidad().setText("Cantidad: " + String.valueOf(productoSeleccionado.getCantidad()));
         holder.getTxtPrecio().setText("Precio: " + String.valueOf(productoSeleccionado.getPrecio()));
+        holder.getImgFoto().setImageResource(R.drawable.carrito);
     }
 
     @Override
     public int getItemCount()
     {
         return productos.size();
+    }
+
+    public Context getContexto() {
+        return contexto;
+    }
+
+    public void setContexto(Context contexto) {
+        this.contexto = contexto;
+    }
+
+    public ArrayList<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(ArrayList<Producto> productos) {
+        this.productos = productos;
     }
 }
 
